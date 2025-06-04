@@ -18,7 +18,15 @@ export default function Child() {
     return (
         <div>
             <h1>The current theme is: {theme}</h1>
-            <button className={buttonColor} onClick={() => setTheme(theme === "light" ? "dark" : "light")}>
+            <button className={buttonColor}
+                onClick={() => {
+                    if (theme === "light") {
+                    setTheme("dark");
+                    } else {
+                    setTheme("light");
+                    }
+                }}
+                >
                 Toggle Theme
             </button>
         </div>
