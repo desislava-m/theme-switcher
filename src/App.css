@@ -1,7 +1,38 @@
 #root {
-  max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  width: 100%;
+  height: 100vh;
 }
 
+
+.light-theme,
+.dark-theme {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;
+  text-align: center;    
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.light-theme {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.dark-theme {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.darkMode-button {
+  background-color: white;
+  border: none;
+}
+
+.lightMode-button {
+  background-color: #000000;
+  color: white;
+}

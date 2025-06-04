@@ -8,9 +8,20 @@ export const ThemeContext = createContext();
 function App() {
   const [theme, setTheme] = useState('light');
 
+  
+    let themeClass = "";
+
+    if (theme === "light") {
+        themeClass = "light-theme"
+    } else {
+        themeClass = "dark-theme"
+    }
+
   return (
     <ThemeContext.Provider value = { {theme, setTheme} }>
-      <Child />
+      <div className={themeClass}>
+        <Child />
+      </div>
     </ThemeContext.Provider>
   )
 }
